@@ -1,0 +1,10 @@
+.header__menu-button_state_pressed {
+  width: 24px;
+  height: 24px;
+  background: url(../../../../images/header-menu-button-state-pressed.svg) center no-repeat;
+  transition: transform 0.5s;
+}
+
+.header__menu-button_state_pressed:hover {
+  transform: rotate(45deg);
+}
