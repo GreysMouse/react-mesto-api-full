@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-mesto-auth/static/css/main.96f82f52.chunk.css",
+    "main.js": "/react-mesto-auth/static/js/main.bf969489.chunk.js",
+    "main.js.map": "/react-mesto-auth/static/js/main.bf969489.chunk.js.map",
+    "runtime-main.js": "/react-mesto-auth/static/js/runtime-main.14ff4439.js",
+    "runtime-main.js.map": "/react-mesto-auth/static/js/runtime-main.14ff4439.js.map",
+    "static/js/2.48611b6d.chunk.js": "/react-mesto-auth/static/js/2.48611b6d.chunk.js",
+    "static/js/2.48611b6d.chunk.js.map": "/react-mesto-auth/static/js/2.48611b6d.chunk.js.map",
+    "index.html": "/react-mesto-auth/index.html",
+    "static/css/main.96f82f52.chunk.css.map": "/react-mesto-auth/static/css/main.96f82f52.chunk.css.map",
+    "static/js/2.48611b6d.chunk.js.LICENSE.txt": "/react-mesto-auth/static/js/2.48611b6d.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/react-mesto-auth/static/media/profile-edit-button.8667ac4a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.14ff4439.js",
+    "static/js/2.48611b6d.chunk.js",
+    "static/css/main.96f82f52.chunk.css",
+    "static/js/main.bf969489.chunk.js"
+  ]
+}
