@@ -1,9 +1,9 @@
 // -------------------------------------------------------------------------------------
-//    Get all cards:          GET:      /cards                  body: {}
-//    Create card:            POST:     /cards                  body: {name, link}
-//    Delete card:            DELETE:   /cards/cardId           body: {}
-//    Check card like:        PUT:      /:cardId/likes          body: {}
-//    Uncheck card like:      DELETE:   /:cardId/likes          body: {}
+//    Get all cards:          GET:      /cards                      body: {}
+//    Create card:            POST:     /cards                      body: {name, link}
+//    Delete card:            DELETE:   /cards/cardId               body: {}
+//    Check card like:        PUT:      /cards/:cardId/likes        body: {}
+//    Uncheck card like:      DELETE:   /cards/:cardId/likes        body: {}
 // -------------------------------------------------------------------------------------
 
 const router = require('express').Router();
