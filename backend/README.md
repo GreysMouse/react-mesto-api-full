@@ -1,5 +1,9 @@
 # Проект Mesto фронтенд + бэкенд
 
+## Навигация
+Публичный IP: 178.154.227.14
+Домен: mesto.project.greysmouse.nomoredomains.club
+
 ## Директории
 
 `/routes` — папка с файлами роутера  

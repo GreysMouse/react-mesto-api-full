@@ -1,10 +1,11 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+const { NODE_ENV, JWT_SECRET } = process.env;
+
 const { InvalidRequestError, UnauthorizedError } = require('../errors');
 
 const User = require('../models/user');
-const { JWT_SECRET_KEY } = require('../constants/jwtSecret');
 
 const login = (req, res, next) => {
   const { email, password } = req.body;
@@ -19,7 +20,7 @@ const login = (req, res, next) => {
     .then((matched) => {
       if (!matched) throw new UnauthorizedError('Invalid email or password');
 
-      const token = jwt.sign({ _id: user._id }, JWT_SECRET_KEY, { expiresIn: '7d' });
+      const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'kied34CNe3Jd208Jk', { expiresIn: '7d' });
 
       return res.cookie('jwt', token, { httpOnly: true, sameSite: true }).send({ email });
     });
