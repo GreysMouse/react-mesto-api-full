@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
 
-const { celebrate, Joi } = require('celebrate');
+const { celebrate, Joi, errors } = require('celebrate');
 
 const { MONGO_URL, MONGO_OPTIONS } = require('./constants/mongoSettings');
 const { CORS_ALLOWED_URLS, CORS_ALLOWED_METHODS, CORS_ALLOWED_HEADERS } = require('./constants/corsSettings');
@@ -73,6 +73,7 @@ app.use('*', (req, res, next) => next(new NotFoundError('Requested resource not 
 
 app.use(errorLogger);
 
+app.use(errors()); //
 app.use(errorHandler);
 
 mongoose.connect(MONGO_URL, MONGO_OPTIONS);
