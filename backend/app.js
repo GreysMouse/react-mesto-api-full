@@ -11,7 +11,7 @@ const { celebrate, Joi } = require('celebrate');
 const { MONGO_URL, MONGO_OPTIONS } = require('./constants/mongoSettings');
 const { CORS_ALLOWED_URLS, CORS_ALLOWED_METHODS, CORS_ALLOWED_HEADERS } = require('./constants/corsSettings');
 
-const { errorHandler } = require('./middlewares/errorHandler');
+const { errorHandler, celebrateErrorHandler } = require('./middlewares/errorHandler');
 const { NotFoundError } = require('./errors');
 const { login } = require('./controllers/login');
 const { logout } = require('./controllers/logout');
@@ -72,7 +72,7 @@ app.use('/cards', auth, require('./routes/cards'));
 app.use('*', (req, res, next) => next(new NotFoundError('Requested resource not found')));
 
 app.use(errorLogger);
-
+app.use(celebrateErrorHandler);
 app.use(errorHandler);
 
 mongoose.connect(MONGO_URL, MONGO_OPTIONS);
