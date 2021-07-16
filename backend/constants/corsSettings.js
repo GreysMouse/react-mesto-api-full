@@ -1,5 +1,6 @@
 const CORS_ALLOWED_URLS = [
   'https://mesto.project.greysmouse.nomoredomains.club',
+  'http://mesto.project.greysmouse.nomoredomains.club'
 ];
 
 const CORS_ALLOWED_METHODS = 'OPTIONS, GET, POST, PUT, DELETE, PATCH';
