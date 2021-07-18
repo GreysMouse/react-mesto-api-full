@@ -22,7 +22,7 @@ const login = (req, res, next) => {
 
       const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'kied34CNe3Jd208Jk', { expiresIn: '7d' });
 
-      return res.cookie('jwt', token, { httpOnly: true, sameSite: true, domain: 'nomoredomains.club' }).send({ email });
+      return res.cookie('jwt', token, { httpOnly: true, sameSite: 'lax' }).send({ email });
     });
   })
   .catch(next);
